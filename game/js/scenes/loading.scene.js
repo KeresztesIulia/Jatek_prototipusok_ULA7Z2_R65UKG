@@ -15,6 +15,28 @@ class LoadingScene extends Phaser.Scene{
         this.load.image('resultsBg', 'assets/results_background.png');
 
         this.load.image('crystal', 'assets/crystal.png');
+        this.load.image('stone', 'assets/stone.png');
+        this.load.image('bigstone', 'assets/bigstone.png');
+        this.load.spritesheet('button', 'assets/button.png', {
+            frameWidth: 200,
+            frameHeight: 200,
+            margin: 0,
+            spacing: 0
+        });
+        this.load.image('hammer', 'assets/hammer.png');
+        this.load.image('pickaxe', 'assets/pickaxe.png');
+        this.load.spritesheet('winSymbols', 'assets/symbols.png', {
+            frameWidth: 200,
+            frameHeight: 200,
+            margin: 0,
+            spacing: 0
+        });
+        this.load.spritesheet('loseSymbols', 'assets/symbolsSad.png', {
+            frameWidth: 200,
+            frameHeight: 200,
+            margin: 0,
+            spacing: 0
+        });
 
         // gombok két állapota: kiválasztva, nem kiválasztva
         // this.load.image('pickaxe', 'assets/pickaxe.png',{
@@ -51,8 +73,6 @@ class LoadingScene extends Phaser.Scene{
         //     margin: 1,
         //     spacing: 1
         // });
-
-        this.tool = 'h';
 
         const bg = this.add.rectangle(
             0, 0,

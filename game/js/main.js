@@ -2,6 +2,7 @@
 
 const loadingScene = new LoadingScene('loading');
 const homeScene = new WelcomeScene('home');
+const instructionsScene = new InstuctionsScene('instructions');
 const gameScene = new GameScene('game');
 const finalScene = new FinalScene('result');
 
@@ -9,11 +10,11 @@ const game = new Phaser.Game({
     type: Phaser.AUTO,
     width: 640,
     height: 320,
-    scene: [loadingScene, homeScene, gameScene, finalScene],
+    scene: [loadingScene, homeScene, instructionsScene, gameScene, finalScene],
     physics: {
         default: 'arcade',
         arcade: {
-            debug: true,
+            debug: false,
             gravity: {
                 y: 0
             }
